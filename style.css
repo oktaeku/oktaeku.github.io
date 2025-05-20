@@ -1,0 +1,38 @@
+/* 基本设置 */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 导航栏背景和内边距 */
+nav {
+  background-color: #333;
+  padding: 0 20px;
+}
+
+/* 横向排列菜单项 */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* 每项的右边距 */
+nav li {
+  margin-right: 20px;
+}
+
+/* 链接样式 */
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 14px 10px;
+}
+
+/* 鼠标悬停效果 */
+nav a:hover {
+  background-color: #575757;
+  border-radius: 4px;
+}
