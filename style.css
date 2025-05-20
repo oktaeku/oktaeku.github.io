@@ -4,6 +4,13 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* 外层容器横向排列 */
+.topbar {
+  display: flex;
+  align-items: center;  /* 垂直居中 */
+  padding: 10px 20px;
+  background-color: #FFFFFF;
+  
 /* 导航栏背景和内边距 */
 nav {
   background-color: #FFFFFF;
