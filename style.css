@@ -7,7 +7,7 @@ body {
 /* 导航栏背景和内边距 */
 nav {
   background-color: #FFFFFF;
-  padding: 0 20px;
+  padding: 0;
 }
 
 /* 横向排列菜单项 */
