@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>作品详情</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="work-page">
+    <a href="index.html">← 返回作品集</a>
+    <div class="image-container">
+      <img id="art-image" src="" alt="作品图片">
+    </div>
+    <div class="work-info">
+      <h1 id="title"></h1>
+      <p id="year"></p>
+      <p id="medium"></p>
+      <p id="size"></p>
+    </div>
+  </main>
+
+  <script src="data.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const work = data[id];
+    
+    if (work) {
+      document.getElementById("art-image").src = work.img;
+      document.getElementById("title").textContent = work.title;
+      document.getElementById("year").textContent = work.year;
+      document.getElementById("medium").textContent = work.medium;
+      document.getElementById("size").textContent = work.size;
+    } else {
+      document.querySelector(".work-page").innerHTML = "<p>该作品不存在。</p>";
+    }
+  </script>
+</body>
+</html>
