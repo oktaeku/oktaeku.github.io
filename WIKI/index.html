@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <title>Gallery</title>
+  <title>自动加载作品集</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>作品集</h1>
-  <div class="gallery">
-    <a href="work.html?id=painting1">
-      <img src="images/thumb1.jpg" alt="作品1">
-    </a>
-    <a href="work.html?id=painting2">
-      <img src="images/thumb2.jpg" alt="作品2">
-    </a>
-    <!-- 可继续添加更多作品 -->
+  <h1>我的作品集（自动加载）</h1>
+  <div class="gallery" id="gallery"></div>
+
+  <!-- 弹出层 -->
+  <div class="lightbox" id="lightbox">
+    <span id="closeBtn">&times;</span>
+    <img id="lightboxImg" src="" alt="大图展示" />
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

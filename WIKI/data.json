@@ -1,0 +1,17 @@
+[
+  {
+    "title": "作品 1",
+    "thumb": "images/thumb1.jpg",
+    "full": "images/full1.jpg"
+  },
+  {
+    "title": "作品 2",
+    "thumb": "images/thumb2.jpg",
+    "full": "images/full2.jpg"
+  },
+  {
+    "title": "作品 3",
+    "thumb": "images/thumb3.jpg",
+    "full": "images/full3.jpg"
+  }
+]
