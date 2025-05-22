@@ -2,7 +2,7 @@
 <html lang="zh">
 	<head>
 		<meta charset="UTF-8">
-		<title>あおくもITC</title>
+		<title>AITAC</title>
 		<link rel="stylesheet" href="style.css"> <!-- 外部 CSS 文件 -->
 			<!-- 通用图标 -->
 			<link rel="icon" href="Images/favicon.ico">
@@ -13,29 +13,19 @@
 			<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
 	</head>
 	<body>
-		<header class="topbar">
-			<div class="logo">
-				<a href="index.html"><!-- 网站logo -->
-				<img src="Images/logo.png" alt="" width="60" /></a>
-				<a href="index.html"><!-- 网站logo -->
-				<p>AOKUMO Institute of Thought and Culture</p></a>
-				
-			</div>
-			<nav> <!-- 顶部导航栏 -->
-				<ul>
-					<li><a href="index.html">Home</a></li><!-- 主页 -->
-					<li><a href="">Photograph</a></li><!-- 摄影栏目，跟主页保持同步 -->
-					<li><a href="">Poem</a></li><!-- 龙神的诗歌栏目，开一个新主页，有返回图标 -->
-					<li><a href="WIKI">WIKI</a></li><!-- wiki的主页，开一个新主页，有返回图标 -->
-					<li><a href="">Sunny</a></li><!-- sunny的图片，开一个新主页，有返回图标 -->
-					<li><a href="about.html">About</a></li><!-- 龙神的诗歌栏目，开一个新主页，有返回图标 -->
-				</ul>
-			</nav>
-		</header>
+		<div id="header-placeholder"></div>
+		
 
 	<h1>这是我的个人网站，正在装修中，目前还在学习阶段</h1>
 	<h3>以下是我学习html和css的练习页面，仅供参考</h3>
 	<h3><a href="Practices">练习</a></h3>
 	
+	<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+    });
+</script>
 	</body>
 </html>
