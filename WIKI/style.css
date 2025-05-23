@@ -12,16 +12,19 @@ h1 {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 15px;
-  padding: 20px;
+  grid-template-columns: repeat(3, 1fr); /* 每行3列 */
+  column-gap: 16px;   /* 只设置列间距 */
+  row-gap: 0;         /* 行间距为0，上下紧贴 */
+  padding: 20px 0;
 }
 
 .gallery img {
   width: 100%;
+  display: block;
   cursor: pointer;
   border-radius: 8px;
   transition: transform 0.3s ease;
+  margin: 0; /* 去除图片自身的外边距 */
 }
 
 .gallery img:hover {
@@ -54,4 +57,81 @@ h1 {
   font-size: 40px;
   color: white;
   cursor: pointer;
+}
+
+/* 左右布局容器 */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+  width: 220px;
+  background: #f5f5f5;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1em;
+}
+
+.sidebar a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+/* 预览样式 */
+.preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.preview-img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.preview-img-wrapper img {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  padding: 0.2em 0.4em;
+  user-select: none;
+}
+
+#prevBtn { left: 10px; }
+#nextBtn { right: 10px; }
+
+#closePreview {
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }

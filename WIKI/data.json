@@ -13,5 +13,20 @@
     "title": "作品 3",
     "thumb": "images/thumb3.jpg",
     "full": "images/full3.jpg"
+  },
+  {
+    "title": "作品 4",
+    "thumb": "images/thumb4.jpg",
+    "full": "images/full4.jpg"
+  },
+  {
+    "title": "作品 5",
+    "thumb": "images/thumb5.jpg",
+    "full": "images/full5.jpg"
+  },
+  {
+    "title": "作品 6",
+    "thumb": "images/thumb6.jpg",
+    "full": "images/full6.jpg"
   }
 ]
