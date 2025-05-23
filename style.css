@@ -4,7 +4,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* 外层容器横向排列 */
+/* 顶栏横向排列 */
 .topbar {
   display: flex;
   align-items: center;
@@ -17,6 +17,7 @@ body {
 nav {
   background-color: #FFFFFF;
   padding: 0;
+  white-space: nowrap;
 }
 
 /* 横向排列菜单项 */
@@ -48,12 +49,44 @@ nav a:hover {
 .logo {
   display: flex;
   align-items: center;
-  width: 40%;
+  white-space: nowrap;/* 不换行 */
   justify-content: flex-start; /* 靠左对齐 */
   /* 如果之前有 margin: 0 auto; 可以去掉 */
 }
 
 .logo img {
   margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .logo {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .logo p {
+    text-align: center;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul {
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+  }
+  nav li {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 
