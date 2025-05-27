@@ -16,16 +16,16 @@
 		<div id="header-placeholder"></div>
 		
 
-	<h1>这是我的个人网站，正在装修中，目前还在学习阶段</h1>
-	<h3>以下是我学习html和css的练习页面，仅供参考</h3>
-	<h3><a href="Practices">练习</a></h3>
-	
-	<script>
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header-placeholder').innerHTML = data;
-    });
-</script>
+		<h1>这是我的个人网站，正在装修中，目前还在学习阶段</h1>
+		<h3>以下是我学习html和css的练习页面，仅供参考</h3>
+		<h3><a href="Practices">练习</a></h3>
+		
+		<script>
+		fetch('header.html')
+			.then(response => response.text())
+			.then(data => {
+			document.getElementById('header-placeholder').innerHTML = data;
+			});
+		</script>
 	</body>
 </html>
