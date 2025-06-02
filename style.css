@@ -34,6 +34,7 @@ nav ul {
 /* 每项的右边距 */
 nav li {
   margin-right: 20px;
+  font-size: 1.2em;
 }
 
 /* 链接样式 */
@@ -65,28 +66,28 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-  .nav-links {
-    display: none;
+  
+  .topbar {
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #444;
-    width: 200px;
-    padding: 10px;
-    z-index: 1000;
+    align-items: center;
   }
 
-  .nav-links.open {
-    display: flex;
+  nav {
+    width: 100%;
+    margin-top: 10px;
   }
 
-  .nav-links a {
-    padding: 10px;
-    border-bottom: 1px solid #666;
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .logo a {
+    justify-content: center;
   }
 }
-

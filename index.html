@@ -2,6 +2,7 @@
 <html lang="zh">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>AITAC</title>
 		<link rel="stylesheet" href="style.css"> <!-- 外部 CSS 文件 -->
 			<!-- 通用图标 -->
@@ -13,19 +14,30 @@
 			<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
 	</head>
 	<body>
-		<div id="header-placeholder"></div>
+		<header class="topbar">
+			<div class="logo">
+				<a href="index.html">
+				<img src="Images/logo.png" alt="" />
+				<p>AOKUMO Institute of Thought, Art and Culture</p>
+				</a>
+			</div>
+			<nav>
+				<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="">Photograph</a></li>
+				<li><a href="">Poem</a></li>
+				<li><a href="WIKI">WIKI</a></li>
+				<li><a href="">Sunny</a></li>
+				<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+		</header>
 		
 
 		<h1>这是我的个人网站，正在装修中，目前还在学习阶段</h1>
 		<h3>以下是我学习html和css的练习页面，仅供参考</h3>
 		<h3><a href="Practices">练习</a></h3>
 		
-		<script>
-		fetch('header.html')
-			.then(response => response.text())
-			.then(data => {
-			document.getElementById('header-placeholder').innerHTML = data;
-			});
-		</script>
+		
 	</body>
 </html>
