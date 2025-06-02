@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>响应式侧边栏</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 240px;
+      height: 100vh;
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: transform 0.3s ease-in-out;
+      z-index: 1000;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: transform 0.2s ease;
+    }
+
+    .sidebar a:hover {
+      transform: scale(1.1);
+    }
+
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: #1a1a1a;
+      z-index: 1100;
+      cursor: pointer;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 900;
+    }
+
+    .content {
+      margin-left: 240px;
+      padding: 40px;
+      flex: 1;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.active {
+        transform: translateX(0);
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .overlay.active {
+        display: block;
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 60px 20px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="hamburger" id="hamburger">☰</button>
+
+  <div class="sidebar" id="sidebar">
+    <a href="#">主页</a>
+    <a href="#">作品</a>
+    <a href="#">关于</a>
+    <a href="#">联系</a>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <main class="content">
+    <h1>欢迎来到我的网站</h1>
+    <p>这里是主要内容区域。可以放你的文字、图片、作品等。</p>
+  </main>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      overlay.classList.add('active');
+      hamburger.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      hamburger.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
