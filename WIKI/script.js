@@ -34,7 +34,7 @@ function showPreview() {
   previewDiv.innerHTML = `
     <div class="preview-img-wrapper" style="position:relative; display:inline-block;">
       <span id="prevBtn" class="arrow" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);z-index:2;font-size:2.5em;cursor:pointer;">&#8592;</span>
-      <img id="previewImg" src="${images[currentIndex].full}" alt="大图预览" style="max-width:80vw;max-height:80vh;display:block;" />
+      <img id="previewImg" src="${images[currentIndex].full}" alt="大图预览"  />
       <span id="nextBtn" class="arrow" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);z-index:2;font-size:2.5em;cursor:pointer;">&#8594;</span>
     </div>
   `;
