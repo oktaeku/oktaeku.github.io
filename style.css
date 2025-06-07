@@ -4,6 +4,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* 设置字体和背景颜色 */
 body {
   min-width: 920px;
   min-height: 100vh;
@@ -11,28 +13,30 @@ body {
   display: flex;
 }
 
-/* 顶栏横向排列 */
+/* 边栏 */
 .sidebar {
   position: fixed;
   display: flex;
   flex-direction: column;
-  background: #1a1a1a;
-  color: white;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
   left: 0;
   top: 0;
   height: 100vh;
   width: 200px;
-  padding: 20px;
+  padding: 60px 20px 20px 20px;
   gap: 20px;
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
 }
 
+/* logo部分 */
 .logo a{
   display: flex;
   justify-content: center;
 }
 
+/* logo图片样式 */
 .logo img {
   width: 40%;
   height: auto;
@@ -47,7 +51,7 @@ nav {
 
 /* 横向排列菜单项 */
 .nav a {
-      color: white;
+      color: rgb(0, 0, 0);
       text-decoration: none;
       font-size: 1.2em;
       font-weight: 500;
